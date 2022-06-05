@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡网</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <ul id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="culture.html">咖啡文化</a></li>
+                <li><a href="drink.html">饮品</a></li>
+                <li><a href="coffee.html">咖啡豆</a></li>
+                <li><a href="make.html">制作方式</a></li>
+                <li><a href="reviews.html">访客留言</a></li>
+            </ul>
+            <!-- 图片轮播开始 -->
+            <div id="box">
+                <script>
+                    var i = 1;//表示当前图片所在位置
+                    var time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                    function icon_left() {
+                        clearTimeout(time)//清楚时钟事件
+                        if (i <= 1) {
+                            i = 4;
+                        } else {
+                            i = i - 2;
+                        }
+                        console.info(i)
+                        showImg()
+                    }
+                    function icon_right() {
+                        clearTimeout(time)//清楚时钟事件
+                        showImg()
+                    }
+                    function showImg() { //让背景图片显示
+                        i++;
+                        if (i == 3)
+                        {//5表示图片有5张1\2\3\4\5
+                            i = 1;
+                        }
+                        document.getElementById("box").style.background = "url( images/banner_0" + i + ".jpg) no-repeat";
+                        document.getElementById("box").style.backgroundSize = "contain";
+                        //通过id获取标签并修改背景样式
+                        time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                    }
+                </script>
+                <img class="icon_left" src="images/icon_left.png" onclick="icon_left()">
+                <img class="icon_right" src="images/icon_right.png" onclick="icon_right()">
+            </div>
+            <!-- 图片轮播结束 -->
+            <!-- 分割线 -->
+            <div class="clear"></div>
+            <div class="border"></div>
+            <!-- 咖啡历史 -->
+            <div class="home-one">
+                <h3>咖啡历史</h3>
+                <img src="images/1.png" width="300">
+                <p>
+                    咖啡树原产于非洲埃塞俄比亚西南剖部的高原地区,当地土著人经常把收啡树的果实磨碎。再把它与动物脂防廖在一起揉捏。做成许多球状的丸子，将这些啡丸子当成珍贵的食物。专供那些即将出征的战士享用。
+                </p>
+            </div>
+            <div class="home-one">
+                <h3>国内发展</h3>
+                <img src="images/2.png" width="300">
+                <p>
+                    咖啡自1898年引进中国海南省文吕市迈号镇种植以来，经过了一百多年，咖啡进入高速发展时期。进入2021年3月下旬。在咖啡种植面积和产量占中国99%以上的云南省,咖啡采收接近尾声。
+                </p>
+            </div>
+            <div class="home-one">
+                <h3>咖啡历史</h3>
+                <img src="images/3.png" width="300">
+                <p>
+                    咖啡树原产于非洲埃塞俄比亚西南剖部的高原地区,当地土著人经常把收啡树的果实磨碎。再把它与动物脂防廖在一起揉捏。做成许多球状的丸子，将这些啡丸子当成珍贵的食物。专供那些即将出征的战士享用。
+                </p>
+            </div>
+            <div class="home-one">
+                <h3>选购指南</h3>
+                <img src="images/4.png" width="300">
+                <p>
+                    不论是味一种收排，新鲜度都是影响品质的重要因素。选购时，抓一两颗红啡豆在嘴中嚼一下，要是清脆有声，表示咖啡豆未受潮,而唇齿留香的咖啡豆才是上品。但最好还是用手捏捏,不要买空壳的收啡。
+                </p>
+            </div>
+            <div class="home-one">
+                <h3>制作方式</h3>
+                <img src="images/5.png" width="300">
+                <p>
+                    德国人发明的冲赢方法。简单地说，就是把咖啡磨粉后，放在一个漏斗里然后再加层站纸，上面浇上热水，首先注入一次热水闷蒸20秒，然后再以绕圈的方式注入热水，由于地球引力作用，咖啡就从底下流出来
+                </p>
+            </div>
+            <div class="home-one">
+                <h3>引用指南</h3>
+                <img src="images/6.png" width="300">
+                <p>
+                    医生提醒，切忌在空腹时思收啡,因为有啡会刺激胃酸分泌。尤其是有胃溃疡的人西应谨慎。收啡作为一种饮品，饮用时，要根据个体情况适可而止。总的来说在营养学中还是强调均衡饮食而少用辛辣刺激食物.
+                </p>
+            </div>
+            <div class="clear"></div>
+            <div class="border1"></div>
+        </header>
+    </div>
+    <footer>
+        <span class="copyright">
+            <span>
+                @Copyright 2022
+            </span>
+        </span>
+    </footer>
+</body>
+
+</html>

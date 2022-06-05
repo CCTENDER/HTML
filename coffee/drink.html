@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡网</title>
+    <link href="css/culture.css" type="text/css" rel="stylesheet" />
+    <link href="css/drink.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <ul id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="culture.html">咖啡文化</a></li>
+                <li><a href="drink.html">饮品</a></li>
+                <li><a href="coffee.html">咖啡豆</a></li>
+                <li><a href="make.html">制作方式</a></li>
+                <li><a href="reviews.html">访客留言</a></li>
+            </ul>
+            <!-- 图片轮播开始 -->
+            <div id="box">
+                <script>
+                    var i = 1;//表示当前图片所在位置
+                    var time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                    function icon_left() {
+                        clearTimeout(time)//清楚时钟事件
+                        if (i <= 1) {
+                            i = 4;
+                        } else {
+                            i = i - 2;
+                        }
+                        console.info(i)
+                        showImg()
+                    }
+                    function icon_right() {
+                        clearTimeout(time)//清楚时钟事件
+                        showImg()
+                    }
+                    function showImg() { //让背景图片显示
+                        i++;
+                        if (i == 3)
+                        {//5表示图片有5张1\2\3\4\5
+                            i = 1;
+                        }
+                        document.getElementById("box").style.background = "url( images/banner_0" + i + ".jpg) no-repeat";
+                        document.getElementById("box").style.backgroundSize = "contain";
+                        //通过id获取标签并修改背景样式
+                        time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                    }
+                </script>
+                <img class="icon_left" src="images/icon_left.png" onclick="icon_left()">
+                <img class="icon_right" src="images/icon_right.png" onclick="icon_right()">
+            </div>
+            <!-- 图片轮播结束 -->
+            <!-- 分割线 -->
+            <div class="clear"></div>
+            <div class="border"></div>
+            
+        </header>
+        <div class="wrapper">
+            <article class="menu">
+                <!-- 第一个菜单 -->
+                <div class="left">
+                    <h3>拿铁￥31</h3>
+                </div>
+                <div class="left star">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_half_full.png" class="noeffects">
+                </div>
+                <div class="right menu-order">
+                    <a class="button" href="https://detail.tmall.com/item.htm?id=523029877541">Order Now</a> 
+                </div>
+                <img src="images/menu/coffee1.jpg" class="left clear item" width="150" alt="">
+                <p class="left">本色的经典咖啡。新鲜萃取的浓缩咖啡中缓缓倒入蒸煮牛奶，覆上轻柔奶泡，简单的香与纯。</p>
+                <div class="border3"></div>
+                <!-- 第二个菜单 -->
+                <div class="left">
+                    <h3>摩卡￥35</h3>
+                </div>
+                <div class="left star">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_half_full.png" class="noeffects">
+                    <img src="images/star_empty.png" class="noeffects">
+                </div>
+                <div class="right menu-order">
+                    <a class="button" href="https://detail.tmall.com/item.htm?id=523036052152">Order Now</a> 
+                </div>
+                <img src="images/menu/coffee2.jpg" class="left clear item" width="150" alt="">
+                <p class="left">摩卡最初是指一种带有巧克力风味的咖啡豆，现在，这份巧克力咖啡仍然带给你纯正的温暖。在浓缩咖啡中加入摩卡酱，与蒸煮牛奶一起交织出丝滑与醇厚。</p>
+                <div class="border3"></div>
+                <!-- 第三个菜单 -->
+                <div class="left">
+                    <h3>卡布奇诺￥32</h3>
+                </div>
+                <div class="left star">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_empty.png" class="noeffects">
+                    <img src="images/star_empty.png" class="noeffects">
+                </div>
+                <div class="right menu-order">
+                    <a class="button" href="https://detail.tmall.com/item.htm?id=523006395165">Order Now</a> 
+                </div>
+                <img src="images/menu/coffee3.jpg" class="left clear item" width="150" alt="">
+                <p class="left">蒸煮牛奶与浓缩咖啡相融合，用丰厚绵密的奶泡覆顶，再撒上肉桂粉或可可粉。</p>
+                <div class="border3"></div>
+                <!-- 第四个菜单 -->
+                <div class="left">
+                    <h3>浓缩咖啡￥38</h3>
+                </div>
+                <div class="left star">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_full.png" class="noeffects">
+                    <img src="images/star_empty.png" class="noeffects">
+                </div>
+                <div class="right menu-order">
+                    <a class="button" href="#">Order Now</a> 
+                </div>
+                <img src="images/menu/coffee4.jpg" class="left clear item" width="150" alt="">
+                <p class="left">萃取浓缩烘焙咖啡豆精华，每一口都馥郁满溢，伴随浓郁的焦糖香及多层次的口感，带你开启咖啡之旅。</p>
+                <!-- 菜单结束 -->
+            </article>
+            <aside class="sidebar">
+                <!-- <img src="images/menu/coffee5.jpg" width="280" alt="">
+                <img src="images/menu/coffee6.jpg" width="280" alt="">
+                <img src="images/menu/coffee7.webp" width="280" alt=""> -->
+                <h4>健康问题</h4>
+                <p>咖啡豆含有大约100种不同的依质,包括咖啡因、单宁酸、油和氮化合物等，每100克速溶辑啡中，含因44-100童克;每100克调制你啡中,含咖用因64~124毫克。咖啡是一种兴奋剂，对人体会产生很多影响,它可利尿、刺激中伛神经和呼吸系统、扩大血管,使心跳加速以及缓解大助和肌肉疲劳.
+                    </p>
+                    <img src="images/coffee.jpg" alt="">
+                <p>没有任何一项研究结果显示咖啡中的咖啡因、黑色素与皮肤黑色素增加或令皮肤老化有绝对的关系。相反地，适量的咖啡因会加速新陈代谢、促进消化、改善便秘，并能够改菩皮肤的粗糙现象。关于咖啡因能加速新陈:代谢，有一种说法是咖啡会加速燃烧卡路里，达到减肥的功效，但是这种卡路里的燃烧还不至于让体重减轻多少，如果咖啡甲还加了糖和奶精,从热量上的计算是更不符合减肥的原则了。</p>
+                <h3><a href="https://starbucks.tmall.com/index.htm?spm=a1z10.3-b-s.w5001-24387477416.2.3e0254e7KR8prO&scene=taobao_shop">购买更多</a></h3>
+                
+                <p></p>
+            </aside>
+            <div class="clear"></div>
+            <div class="border1"></div>
+        </div>
+    </div>
+    </div> 
+    <footer>
+        <span class="copyright">
+            <span>
+                @Copyright 2022
+            </span>
+        </span>
+    </footer>  
+</body>
+
+</html>

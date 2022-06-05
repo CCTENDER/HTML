@@ -1,0 +1,73 @@
+.wrapper {
+    margin-top: 30px;
+}
+article {
+    display: block;
+    float: left;
+    width: 630px;
+    padding: 10px;
+    border-right: 1px dashed #9c5959;
+}
+article img, aside img {
+    background: #9c5959;
+    padding: 1px;
+    box-shadow: 0 0 4px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+.star .menu-order .menu .item {
+    margin-top: 15px;
+}
+.left {
+    float: left;
+    margin-right: 10px;
+}
+.menu img {
+    margin-bottom: 20px;
+}
+.menu p {
+    width: 420px;
+}
+.noeffects {
+    background: none;
+    padding: 0;
+    margin-left: 0;
+    box-shadow: 0 0 0 rgb(0 0 0 / 50%);
+    border-radius: 0;
+}
+.right {
+    float: right;
+    margin-left: 10px;
+}
+.button {
+    position: relative;
+    color: #f5f5f5;
+    padding: 8px 14px 10px;
+    background-color: #9c5959;
+    box-shadow: inset 0px -3px 1px rgb(0 0 0 / 45%);
+    border:none;
+    text-decoration:none;
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 50%);
+    font-size: 20px;
+}
+p {
+    font-size: 14px;
+    padding: 10px;
+}
+.border3 {
+    height:3px;
+    clear: both;
+    border-bottom: 1px dotted #9c5959;
+    margin-bottom: 10px;
+}
+/* 右侧标签 */
+.sidebar {
+    display: block;
+    float: right;
+    width: 280px;
+    height: 100%;
+    padding: 10px;
+}
+aside h3 {
+    text-align: center;
+    font-size: 40px;
+}

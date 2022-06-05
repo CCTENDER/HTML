@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/culture.css" type="text/css" rel="stylesheet" />
+    <link href="css/drink.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="container">
+        <header>
+            <ul id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="culture.html">咖啡文化</a></li>
+                <li><a href="drink.html">饮品</a></li>
+                <li><a href="coffee.html">咖啡豆</a></li>
+                <li><a href="make.html">制作方式</a></li>
+                <li><a href="reviews.html">访客留言</a></li>
+            </ul>
+           <!-- 图片轮播开始 -->
+           <div id="box">
+            <script>
+                var i = 1;//表示当前图片所在位置
+                var time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                function icon_left() {
+                    clearTimeout(time)//清楚时钟事件
+                    if (i <= 1) {
+                        i = 4;
+                    } else {
+                        i = i - 2;
+                    }
+                    console.info(i)
+                    showImg()
+                }
+                function icon_right() {
+                    clearTimeout(time)//清楚时钟事件
+                    showImg()
+                }
+                function showImg() { //让背景图片显示
+                    i++;
+                    if (i == 3)
+                    {//5表示图片有5张1\2\3\4\5
+                        i = 1;
+                    }
+                    document.getElementById("box").style.background = "url( images/banner_0" + i + ".jpg) no-repeat";
+                    document.getElementById("box").style.backgroundSize = "contain";
+                    //通过id获取标签并修改背景样式
+                    time = setTimeout("showImg()", 2000);//启动时钟事件刷新时间 1000==1秒
+                }
+            </script>
+            <img class="icon_left" src="images/icon_left.png" onclick="icon_left()">
+            <img class="icon_right" src="images/icon_right.png" onclick="icon_right()">
+        </div>
+        <!-- 图片轮播结束 -->
+            <!-- 分割线 -->
+            <div class="clear"></div>
+            <div class="border"></div>
+        </header>
+        <div class="wapper">
+            <article class="content">
+                <h3>咖啡豆制作方式</h3>
+                <h4>一、滴滤咖啡</h4>
+                <p>滴滤咖啡是德国人发明的冲煮方法。简单地说，就是把咖啡磨粉后，放在一个漏斗里然后再加层话纸，上面浇上热水（理想水温80℃到85℃之间)，首先注入一次热水闷蒸20秒，然后再以绕圈的方式注入热水，由于地球引力作用，咖啡就从底下流出来。咖啡的量通常是7~10克粉可以做大约120ml的一杯。</p>
+                <p>研陪度:咖啡呈现砂糖状的田微预粒感</p>
+                <p>水粉比: 1:15-18.18(视个人口味、豆品、使用情况而定)</p>
+                <h4>二、虹吸壶(Syphon)</h4>
+                <p>虹吸壶是坊间咖啡馆最普及的咖啡煮法之一。原理:在酒精灯的燃烧下，下层容器中的水温达到92℃时，水流被吸到有咖啡粉未的上层容器中,通过浸泡、搅拌后，制成的咖啡再原路返回。</p>
+                <p>研磨度:比粉状略粗,接近特粒细砂糖。</p>
+                <h4>三、摩卡壶(Moka Pot)</h4>
+                <p>摩卡壶基本原理利用加压的热水快速通过咖啡粉萃取咖啡液。最早的摩卡壶是意大利人在1933年制造的。他的公司Bialetti一直以生产这种咖啡壶而闻名世界。摩卡咖啡壶在欧洲使用比较普遍。摩卡壶分为上下两部分，水放在下半部分煮开沸脑产生蒸气压力;滚水上升，经过装有咖啡粉的过诚壶;当咖啡流至上半部时，将火关小。如果温度太高会使咖啡产生焦味。</p>
+                <p>使用注意事项:</p>
+                <p>1.水位:使用温水。水位在安全阀下0.5厘米位置。安全阀在遇到下壶压力过高时会自动泄压，以防止出现安全事故，水位如果高过安全阀，安全阀的作用就不能正常发挥。</p>
+                <p>2．咖啡粉:咖啡粉采用中细粒度，装满粉槽，装粉的时候适当振动粉槽让咖啡粉均匀分布，装满以后，用手轻轻按压表面，使粉史密实一些</p>
+                <h4>四、比利时皇家咖啡壶(Balancing Syphon)</h4>
+                <p>比利时皇家咖啡壶兼有虹吸式咖啡壶和摩卡壶特色的比利时壶，演出过程充满跷跷板式趣味。它结合了数种自然的力量;火、蒸汽、压力、重力，这些使得比利时皇家咖啡壶的操作感觉更具可看性.</p>
+                <h4>五、法式战压壶</h4>
+                <p>法式滤压壶简称法压壶，是一种同时具备冲茶器功能的喊啡壶。原理:用浸泡的方式，通过水与咖啡粉全面接觖浸泡的焖点法来释放咖啡的精华。适用咖啡;浓淡口味均可的咖啡粉。研磨度:粗颗粒状。</p>
+                <p>缺点:由于金属滤网对细粉无法彻底的过滤，咖啡豆需要粗研磨，收啡粉颗粒变粗，导致大量内容物无法萃取。而长时间浸泡又会萃取过度，苦味、涩味、杂味纷纷涌出，因此咖啡口惑稍逊一筹</p>
+                <h4>六、电动式以啡机</h4>
+                <p>一般市面上常见的有关式M啡设派机、意大利式蒸汽咖啡机。美式祇沉以啡机的价格与虹吸壶不相上下，适合中度或俯深度烘焙的咖啡，研磨颡粒略细，口味偏苦涩。它通过电力将水煮肃后浸泡，这样做的熙咖啡最简单，但由于用沸水制作，口感稍逊一筹。用意大利式蒸汽咖啡机冲泡的咖啡比较浓，温度也比较高，口味比关式商漏机冲泡的咖啡要田。意式蒸汽咖啡壶是种通过高压高温让蒸汽快速通过咖啡粉萃取咖啡的机器，煮咖啡的最佳温度在90~98摄氏度之间，意式咖啡机湿控做得相当好。家用的意式咖啡机往往还带着一支打奶泡的嘴，做卡布奇诺;另外往往还有将杯子温热的功能。</p>
+            </article>
+            <aside class="sidebar">
+                <h4>健康问题</h4>
+                <p>咖啡豆含有大约100种不同的依质,包括咖啡因、单宁酸、油和氮化合物等，每100克速溶辑啡中，含因44-100童克;每100克调制你啡中,含咖用因64~124毫克。咖啡是一种兴奋剂，对人体会产生很多影响,它可利尿、刺激中伛神经和呼吸系统、扩大血管,使心跳加速以及缓解大助和肌肉疲劳.
+                    </p>
+                    <img src="images/coffee.jpg" alt="">
+                <p>没有任何一项研究结果显示咖啡中的咖啡因、黑色素与皮肤黑色素增加或令皮肤老化有绝对的关系。相反地，适量的咖啡因会加速新陈代谢、促进消化、改善便秘，并能够改菩皮肤的粗糙现象。关于咖啡因能加速新陈:代谢，有一种说法是咖啡会加速燃烧卡路里，达到减肥的功效，但是这种卡路里的燃烧还不至于让体重减轻多少，如果咖啡甲还加了糖和奶精,从热量上的计算是更不符合减肥的原则了。</p>
+            </aside>
+        </div>
+        <div class="clear"></div>
+            <div class="border1"></div>
+    </div>
+    <footer>
+        <span class="copyright">
+            <span>
+                @Copyright 2022
+            </span>
+        </span>
+    </footer>  
+</body>
+</html>
